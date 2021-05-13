@@ -31,7 +31,7 @@ export default function Blog() {
         </Toolbar>
       </AppBar>
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
-        Mr.Phupa is currently working on an UI design la
+        Mr.Phupa is currently working on a UI design la
       </h1>
     </React.Fragment>
   );
