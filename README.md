@@ -64,11 +64,18 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
  - learn when to use grid vs flexbox vs position(CSS)
  - how to do media queries
 ###  Stages
-1. UI Mock
+
+1. UI 
+ 1.1 mock design
+ 1.2 draft 3 sizes on figma
 2. build MVP
 3. Deploy
 4. whatever lol
 
+### Design
+```shell
+https://www.figma.com/file/ARlYl0FgkjLlau33pFqW6A/zuck-blog?node-id=0%3A1
+```
 
 ### Functional  Requirements
 1. create / read/ update/ delete post -  admin
