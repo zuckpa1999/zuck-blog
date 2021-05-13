@@ -23,9 +23,7 @@ export default function Blog() {
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-          >
-
-          </IconButton>
+          ></IconButton>
           <Typography variant="h5" className={classes.title}>
             zuck_pa
           </Typography>
