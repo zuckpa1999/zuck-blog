@@ -14,8 +14,12 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import img from "../../asset/daydream.png";
+import cat from "../../asset/cat2.jpg";
+import img2 from "../../asset/js.png";
 export default function Blog() {
   const classes = useStyles();
   return (
@@ -45,10 +49,12 @@ export default function Blog() {
       {/*  <h1 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
         Mr.Phupa is currently working on a UI design la
       </h1> */}
+
       <div className={classes.cardFeed}>
-        <hr />
-        <div>Jumbotron</div>
-        <Divider />
+        {/*         <div>Jumbotron</div> */}
+        <img src={img2} style={{ width: "90%", height: "11em" }} />
+        {/*         <Divider /> */}
+
         <Card className={classes.rootCard}>
           <CardActionArea>
             <CardMedia
@@ -99,7 +105,7 @@ export default function Blog() {
               component="img"
               alt="DayDream"
               height="140"
-              image={img}
+              image={cat}
               title="DayDream"
             />
             <CardContent>
@@ -116,7 +122,7 @@ export default function Blog() {
                     color: "#8B8282",
                   }}
                 >
-                  14 May 2021
+                  3 May 2021
                 </Typography>
               </div>
               <div className={classes.cardContentDetail2}>
@@ -125,12 +131,12 @@ export default function Blog() {
                   style={{ borderRadius: "15em", marginRight: "2%" }}
                 >
                   <Typography style={{ fontSize: "0.6em", fontWeight: 400 }}>
-                    camera
+                    cat
                   </Typography>
                 </Button>
                 <Button variant="outlined" style={{ borderRadius: "15em" }}>
                   <Typography style={{ fontSize: "0.6em", fontWeight: 300 }}>
-                    lifestyle
+                    home
                   </Typography>
                 </Button>
               </div>
@@ -181,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
   rootCard: {
     /* maxWidth: 345, */
     marginTop: "3%",
-    width: "24em",
+    width: "90%",
     /* height: "16em", */
   },
   cardContentDetail1: {
