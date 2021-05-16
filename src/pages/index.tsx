@@ -14,6 +14,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import Divider from "@material-ui/core/Divider";
 import img from "../../asset/daydream.png";
 export default function Blog() {
   const classes = useStyles();
@@ -45,7 +46,9 @@ export default function Blog() {
         Mr.Phupa is currently working on a UI design la
       </h1> */}
       <div className={classes.cardFeed}>
+        <hr />
         <div>Jumbotron</div>
+        <Divider />
         <Card className={classes.rootCard}>
           <CardActionArea>
             <CardMedia
@@ -77,13 +80,13 @@ export default function Blog() {
                   variant="outlined"
                   style={{ borderRadius: "15em", marginRight: "2%" }}
                 >
-                  <Typography style={{ fontSize: "0.9em", fontWeight: 100 }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 200 }}>
                     camera
                   </Typography>
                 </Button>
                 <Button variant="outlined" style={{ borderRadius: "15em" }}>
-                  <Typography style={{ fontSize: "0.9em", fontWeight: 100 }}>
-                    life style
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 200 }}>
+                    lifestyle
                   </Typography>
                 </Button>
               </div>
@@ -97,18 +100,18 @@ export default function Blog() {
               alt="DayDream"
               height="140"
               image={img}
-              title="Contemplative Reptile"
+              title="DayDream"
             />
             <CardContent>
-              <div className={classes.cardContentDetail}>
-                <Typography style={{ fontSize: "0.7em" }}>
+              <div className={classes.cardContentDetail1}>
+                <Typography style={{ fontSize: "1.2em" }}>
                   A day filled with memories
                 </Typography>
                 <Typography
                   style={{
                     marginLeft: "16%",
-                    marginTop: "1%",
-                    fontSize: "0.5em",
+                    marginTop: "2%",
+                    fontSize: "0.8em",
                     fontWeight: 180,
                     color: "#8B8282",
                   }}
@@ -116,23 +119,25 @@ export default function Blog() {
                   14 May 2021
                 </Typography>
               </div>
-              <div className={classes.cardContentDetail}>
-                <div>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Liza
+              <div className={classes.cardContentDetail2}>
+                <Button
+                  variant="outlined"
+                  style={{ borderRadius: "15em", marginRight: "2%" }}
+                >
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 100 }}>
+                    camera
                   </Typography>
-                </div>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Liza
-                </Typography>
+                </Button>
+                <Button variant="outlined" style={{ borderRadius: "15em" }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 100 }}>
+                    lifestyle
+                  </Typography>
+                </Button>
               </div>
             </CardContent>
           </CardActionArea>
         </Card>
+        <h4 style={{ fontWeight: 200 }}>© zuck_pa</h4>
       </div>
     </React.Fragment>
   );
