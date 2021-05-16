@@ -189,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "3%",
     width: "90%",
     /* height: "16em", */
-    //s
+    //ss
   },
   cardContentDetail1: {
     display: "flex",
