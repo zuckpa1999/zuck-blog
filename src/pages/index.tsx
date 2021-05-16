@@ -51,21 +51,65 @@ export default function Blog() {
             <CardMedia
               component="img"
               alt="DayDream"
-              height="160"
+              height="140"
               image={img}
-              title="Contemplative Reptile"
+              title="DayDream"
             />
             <CardContent>
-              <div className={classes.cardContentDetail}>
+              <div className={classes.cardContentDetail1}>
                 <Typography style={{ fontSize: "1.2em" }}>
                   A day filled with memories
                 </Typography>
                 <Typography
                   style={{
                     marginLeft: "16%",
+                    marginTop: "2%",
+                    fontSize: "0.8em",
+                    fontWeight: 180,
+                    color: "#8B8282",
+                  }}
+                >
+                  14 May 2021
+                </Typography>
+              </div>
+              <div className={classes.cardContentDetail2}>
+                <Button
+                  variant="outlined"
+                  style={{ borderRadius: "15em", marginRight: "2%" }}
+                >
+                  <Typography style={{ fontSize: "0.9em", fontWeight: 100 }}>
+                    camera
+                  </Typography>
+                </Button>
+                <Button variant="outlined" style={{ borderRadius: "15em" }}>
+                  <Typography style={{ fontSize: "0.9em", fontWeight: 100 }}>
+                    life style
+                  </Typography>
+                </Button>
+              </div>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card className={classes.rootCard}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              alt="DayDream"
+              height="140"
+              image={img}
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <div className={classes.cardContentDetail}>
+                <Typography style={{ fontSize: "0.7em" }}>
+                  A day filled with memories
+                </Typography>
+                <Typography
+                  style={{
+                    marginLeft: "16%",
                     marginTop: "1%",
-                    fontSize: "0.9em",
-                    fontWeight: "180",
+                    fontSize: "0.5em",
+                    fontWeight: 180,
                     color: "#8B8282",
                   }}
                 >
@@ -73,9 +117,15 @@ export default function Blog() {
                 </Typography>
               </div>
               <div className={classes.cardContentDetail}>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Liza
-                </Typography>
+                <div>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Liza
+                  </Typography>
+                </div>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Liza
                 </Typography>
@@ -123,12 +173,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   rootCard: {
-    maxWidth: 345,
+    /* maxWidth: 345, */
+    marginTop: "3%",
+    width: "24em",
+    /* height: "16em", */
   },
-  cardContentDetail: {
+  cardContentDetail1: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
+  },
+  cardContentDetail2: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    marginTop: "2%",
   },
 }));
 
