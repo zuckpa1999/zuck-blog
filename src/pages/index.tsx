@@ -57,17 +57,29 @@ export default function Blog() {
             />
             <CardContent>
               <div className={classes.cardContentDetail}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Lizard
+                <Typography style={{ fontSize: "1.2em" }}>
+                  A day filled with memories
                 </Typography>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Lizard
+                <Typography
+                  style={{
+                    marginLeft: "16%",
+                    marginTop: "1%",
+                    fontSize: "0.9em",
+                    fontWeight: "180",
+                    color: "#8B8282",
+                  }}
+                >
+                  14 May 2021
                 </Typography>
               </div>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
+              <div className={classes.cardContentDetail}>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Liza
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Liza
+                </Typography>
+              </div>
             </CardContent>
           </CardActionArea>
         </Card>
@@ -116,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
   cardContentDetail: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "stretch",
+    justifyContent: "flex-start",
   },
 }));
 
