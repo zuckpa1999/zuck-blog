@@ -60,7 +60,7 @@ export default function Blog() {
             />
             <CardContent>
               <div className={classes.cardContentDetail1}>
-                <Typography style={{ fontSize: "1.2em" }}>
+                <Typography style={{ fontSize: "1.22em" }}>
                   A day filled with memories
                 </Typography>
                 <Typography
@@ -80,12 +80,12 @@ export default function Blog() {
                   variant="outlined"
                   style={{ borderRadius: "15em", marginRight: "2%" }}
                 >
-                  <Typography style={{ fontSize: "0.6em", fontWeight: 200 }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 350 }}>
                     camera
                   </Typography>
                 </Button>
                 <Button variant="outlined" style={{ borderRadius: "15em" }}>
-                  <Typography style={{ fontSize: "0.6em", fontWeight: 200 }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 350 }}>
                     lifestyle
                   </Typography>
                 </Button>
@@ -124,12 +124,12 @@ export default function Blog() {
                   variant="outlined"
                   style={{ borderRadius: "15em", marginRight: "2%" }}
                 >
-                  <Typography style={{ fontSize: "0.6em", fontWeight: 100 }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 400 }}>
                     camera
                   </Typography>
                 </Button>
                 <Button variant="outlined" style={{ borderRadius: "15em" }}>
-                  <Typography style={{ fontSize: "0.6em", fontWeight: 100 }}>
+                  <Typography style={{ fontSize: "0.6em", fontWeight: 300 }}>
                     lifestyle
                   </Typography>
                 </Button>
@@ -163,6 +163,7 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     backgroundColor: "transparent",
     color: "transparent",
+    boxShadow: "none",
   },
   toolbar: {
     color: "black",
