@@ -30,7 +30,7 @@ export default function Cardblog({ date, topic, tags, image }) {
             {tags.map((tag) => (
               <Button variant="outlined" className={classes.cardContentTag}>
                 <Typography className={classes.cardContentText}>
-                  {tag}
+                  {tag === undefined ? null : tag}
                 </Typography>
               </Button>
             ))}
