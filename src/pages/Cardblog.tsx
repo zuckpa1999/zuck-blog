@@ -27,13 +27,15 @@ export default function Cardblog({ date, topic, tags, image }) {
             <Typography className={classes.cardContentDate}>{date}</Typography>
           </div>
           <div className={classes.cardContentDetailSecondRow}>
-            {tags.map((tag) => (
-              <Button variant="outlined" className={classes.cardContentTag}>
-                <Typography className={classes.cardContentText}>
-                  {tag === undefined ? null : tag}
-                </Typography>
-              </Button>
-            ))}
+            {tag === undefined
+              ? null
+              : tags.map((tag) => (
+                  <Button variant="outlined" className={classes.cardContentTag}>
+                    <Typography className={classes.cardContentText}>
+                      {tag === undefined ? null : tag}
+                    </Typography>
+                  </Button>
+                ))}
           </div>
         </CardContent>
       </CardActionArea>
