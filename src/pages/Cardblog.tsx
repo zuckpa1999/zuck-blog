@@ -27,7 +27,7 @@ export default function Cardblog({ date, topic, tags, image }) {
             <Typography className={classes.cardContentDate}>{date}</Typography>
           </div>
           <div className={classes.cardContentDetailSecondRow}>
-            {tag === undefined
+            {tags === undefined
               ? null
               : tags.map((tag) => (
                   <Button variant="outlined" className={classes.cardContentTag}>
