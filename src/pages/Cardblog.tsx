@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 export default function Cardblog({ date, topic, tags, image }) {
   const classes = useStyles();
-  //d
+
   return (
     <Card className={classes.rootCard}>
       <CardActionArea>
