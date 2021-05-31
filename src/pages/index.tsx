@@ -28,71 +28,75 @@ export default function Blog() {
 
   return (
     // a component to return multiple elements.
-    <React.Fragment>
-      <CssBaseline />
-      <Navbar />
-      <div className={classes.cardFeed}>
-        <img src={js} className={classes.banner} />
-        <Grid
-          container
-          alignItems="center"
-          justify="center"
-          style={{
-            marginLeft: "9%",
-            marginRight: width > 600 ? "2%" : "none",
-            padding: width > 600 ? "0.45em" : "none",
-          }}
-        >
-          <Grid item xs={12} sm={6}>
-            <Cardblog
-              date="14 May 20221"
-              // If the texts are long, it will enter the new line and break the layout
-              topic="Chontong the cat"
-              tags={["camera", "life style"]}
-              image={cat}
-            />
+    <div className={classes.root}>
+      <React.Fragment>
+        <CssBaseline />
+        <Navbar />
+        <div className={classes.cardFeed}>
+          <img src={js} className={classes.banner} />
+          <Grid
+            container
+            alignItems="center"
+            justify="center"
+            style={{
+              marginLeft: width > 600 ? "13%" : "4%",
+              marginRight: width > 600 ? "10%" : "none",
+              padding: width > 600 ? "0.45em" : "none",
+            }}
+          >
+            <Grid item xs={12} sm={6}>
+              <Cardblog
+                date="14 May 20221"
+                // If the texts are long, it will enter the new line and break the layout
+                topic="Chontong the cat"
+                tags={["camera", "life style"]}
+                image={cat}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Cardblog
+                date="3 May 20221"
+                topic="Chontong the cat"
+                tags={["home", "cat"]}
+                image={cat}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Cardblog
+                date="14 May 20221"
+                topic="Chontong the cat"
+                tags={["camera", "life style"]}
+                image={daydream}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Cardblog
+                date="3 May 20221"
+                topic="Chontong the cat"
+                tags={["home", "cat"]}
+                image={cat}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Cardblog
-              date="3 May 20221"
-              topic="Chontong the cat"
-              tags={["home", "cat"]}
-              image={cat}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Cardblog
-              date="14 May 20221"
-              topic="Chontong the cat"
-              tags={["camera", "life style"]}
-              image={daydream}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Cardblog
-              date="3 May 20221"
-              topic="Chontong the cat"
-              tags={["home", "cat"]}
-              image={cat}
-            />
-          </Grid>
-        </Grid>
-        <h4 style={{ fontWeight: 200 }}>© zuck_pa</h4>
-      </div>
-    </React.Fragment>
+          <h4 style={{ fontWeight: 200 }}>© zuck_pa</h4>
+        </div>
+      </React.Fragment>
+    </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginLeft: "1.3%",
   },
   banner: {
-    width: "90%",
+    width: "92.5%",
     height: "11em",
-    /*   display: "flex",
+    display: "flex",
     flexDirection: "row",
-    alignContent: "center", */
+    alignItems: "center",
+    marginRight: "2.8%",
   },
   cardFeed: {
     display: "flex",

@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
   rootCardTablet: {
     marginTop: "3%",
-    width: "90%",
+    width: "88%",
   },
   cardContentTopic: {
     fontSize: "1.22em",
