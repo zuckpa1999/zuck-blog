@@ -8,23 +8,13 @@ import Cardblog from "./Cardblog";
 import Navbar from "./Navbar";
 import Grid from "@material-ui/core/Grid";
 import { useLayoutEffect, useState } from "react";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 export default function Blog() {
   const classes = useStyles();
-  const [width] = useMediaQuery();
-  function useMediaQuery() {
-    const [screenSize, setScreenSize] = useState([0, 0]);
-
-    useLayoutEffect(() => {
-      function updateScreenSize() {
-        setScreenSize([window.innerWidth, window.innerHeight]);
-      }
-      window.addEventListener("resize", updateScreenSize);
-      updateScreenSize();
-      return () => window.removeEventListener("resize", updateScreenSize);
-    }, []);
-
-    return screenSize;
-  }
+  const theme = useTheme();
+  const matches_sm = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches_ipad = useMediaQuery(theme.breakpoints.only("sm"));
 
   return (
     // a component to return multiple elements.
@@ -33,15 +23,18 @@ export default function Blog() {
         <CssBaseline />
         <Navbar />
         <div className={classes.cardFeed}>
-          <img src={js} className={classes.banner} />
+          <img
+            src={js}
+            className={matches_ipad ? classes.banner_ipad : classes.banner}
+          />
           <Grid
             container
             alignItems="center"
             justify="center"
             style={{
-              marginLeft: width > 600 ? "13%" : "4%",
-              marginRight: width > 600 ? "10%" : "none",
-              padding: width > 600 ? "0.45em" : "none",
+              marginLeft: matches_sm ? "4%" : "13%",
+              marginRight: matches_sm ? "none" : "10",
+              padding: matches_sm ? "none" : "0,45em",
             }}
           >
             <Grid item xs={12} sm={6}>
@@ -92,11 +85,18 @@ const useStyles = makeStyles((theme) => ({
   },
   banner: {
     width: "92.5%",
-    height: "11em",
+    height: "12em",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     marginRight: "2.8%",
+  },
+  banner_ipad: {
+    width: "96.5%",
+    height: "12em",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
   },
   cardFeed: {
     display: "flex",
@@ -104,6 +104,3 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
 }));
-
-// card container
-// props - date -str, topic-str, tags-arr?, image-str

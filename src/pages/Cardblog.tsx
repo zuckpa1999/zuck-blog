@@ -7,26 +7,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { useLayoutEffect, useState } from "react";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 export default function Cardblog({ date, topic, tags, image }) {
   const classes = useStyles();
-  const [width] = useMediaQuery();
-  function useMediaQuery() {
-    const [screenSize, setScreenSize] = useState([0, 0]);
+  const theme = useTheme();
+  const matches_sm = useMediaQuery(theme.breakpoints.down("sm"));
 
-    useLayoutEffect(() => {
-      function updateScreenSize() {
-        setScreenSize([window.innerWidth, window.innerHeight]);
-      }
-      window.addEventListener("resize", updateScreenSize);
-      updateScreenSize();
-      return () => window.removeEventListener("resize", updateScreenSize);
-    }, []);
-
-    return screenSize;
-  }
   return (
     <Card
-      className={width <= 600 ? classes.rootCardMobile : classes.rootCardTablet}
+      className={matches_sm ? classes.rootCardMobile : classes.rootCardTablet}
     >
       <CardActionArea>
         <CardMedia
