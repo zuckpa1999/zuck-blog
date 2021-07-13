@@ -2,31 +2,34 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import js from "../../asset/js.png";
+import daydream from "../../asset/daydream.png";
+import cat from "../../asset/cat2.jpg";
+import { useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 export default function Slider() {
+  const classes = useStyles();
   return (
-    <Carousel>
+    <Carousel showThumbs={false} className={classes.root}>
       <div>
-        <img
-          alt=""
-          src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697"
-        />
+        <img alt="" src={js} />
       </div>
       <div>
         <img alt="" src={js} />
-        <p className="legend">Legend 3</p>
       </div>
       <div>
-        <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg" />
-        <p className="legend">Legend 4</p>
+        <img alt="" src={js} />
       </div>
       <div>
-        <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" />
-        <p className="legend">Legend 5</p>
-      </div>
-      <div>
-        <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-6.jpg" />
-        <p className="legend">Legend 6</p>
+        <img alt="" src={js} />
       </div>
     </Carousel>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "93%",
+    height: "10%",
+    marginRight: "3%",
+  },
+}));

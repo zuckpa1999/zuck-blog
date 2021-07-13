@@ -27,10 +27,10 @@ export default function Blog() {
         <CssBaseline />
         <Navbar />
         <div className={classes.cardFeed}>
-          <img
+          {/*     <img
             src={js}
             className={matches_ipad ? classes.banner_ipad : classes.banner}
-          />
+          /> */}
           <Slider />
           <Grid
             container
