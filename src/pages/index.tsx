@@ -39,7 +39,7 @@ export default function Blog() {
             style={{
               marginLeft: matches_sm ? "4%" : "13%",
               marginRight: matches_sm ? "none" : "10",
-              padding: matches_sm ? "none" : "0,45em",
+              paddingLeft: matches_sm ? "none" : "0,45em",
             }}
           >
             <Grid item xs={12} sm={6}>

@@ -6,10 +6,16 @@ import daydream from "../../asset/daydream.png";
 import cat from "../../asset/cat2.jpg";
 import { useTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 export default function Slider() {
+  const theme = useTheme();
   const classes = useStyles();
+  const matches_sm = useMediaQuery(theme.breakpoints.only("sm"));
   return (
-    <Carousel showThumbs={false} className={classes.root}>
+    <Carousel
+      showThumbs={false}
+      className={matches_sm ? classes.root_sm : classes.root_oversm}
+    >
       <div>
         <img alt="" src={js} />
       </div>
@@ -27,7 +33,12 @@ export default function Slider() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  root_sm: {
+    width: "96%",
+    height: "10%",
+    marginRight: "0.8%",
+  },
+  root_oversm: {
     width: "93%",
     height: "10%",
     marginRight: "3%",
