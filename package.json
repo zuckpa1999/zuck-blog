@@ -24,6 +24,10 @@
     "material-icons": "^0.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-native-paper": "^4.8.1"
+    "react-native-paper": "^4.8.1",
+    "react-responsive-carousel": "^3.2.19"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6"
   }
 }

@@ -14,6 +14,10 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MailIcon from "@material-ui/icons/Mail";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
+import HomeIcon from "@material-ui/icons/Home";
+import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
+import PublicIcon from "@material-ui/icons/Public";
+import ComputerIcon from "@material-ui/icons/Computer";
 export default function Navbar() {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -30,7 +34,10 @@ export default function Navbar() {
         {["Home", "Camera", "Life Style", "Technology"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index === 0 ? <HomeIcon /> : null}
+              {index === 1 ? <PhotoCameraIcon /> : null}
+              {index === 2 ? <PublicIcon /> : null}
+              {index === 3 ? <ComputerIcon /> : null}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>

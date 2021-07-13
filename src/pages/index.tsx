@@ -6,10 +6,14 @@ import cat from "../../asset/cat2.jpg";
 import js from "../../asset/js.png";
 import Cardblog from "./Cardblog";
 import Navbar from "./Navbar";
+import Slider from "./Slider";
 import Grid from "@material-ui/core/Grid";
 import { useLayoutEffect, useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+
 export default function Blog() {
   const classes = useStyles();
   const theme = useTheme();
@@ -27,6 +31,7 @@ export default function Blog() {
             src={js}
             className={matches_ipad ? classes.banner_ipad : classes.banner}
           />
+          <Slider />
           <Grid
             container
             alignItems="center"
