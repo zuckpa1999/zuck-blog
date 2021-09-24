@@ -20,7 +20,7 @@ export default function Slider() {
         <img alt="" src={js} />
       </div>
       <div>
-        <img alt="" src={js} />
+        <img alt="" src={daydream} />
       </div>
       <div>
         <img alt="" src={js} />
@@ -31,6 +31,8 @@ export default function Slider() {
     </Carousel>
   );
 }
+
+/* onclick on div to go to the blog,  */
 
 const useStyles = makeStyles((theme) => ({
   root_sm: {
