@@ -5,6 +5,7 @@ import daydream from "../../asset/daydream.png";
 import cat from "../../asset/cat2.jpg";
 import js from "../../asset/js.png";
 import Cardblog from "./Cardblog";
+import SingleBlog from "./SIngleBlog";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 import Grid from "@material-ui/core/Grid";
@@ -13,73 +14,90 @@ import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 
 export default function Blog() {
   const classes = useStyles();
   const theme = useTheme();
   const matches_sm = useMediaQuery(theme.breakpoints.down("sm"));
   const matches_ipad = useMediaQuery(theme.breakpoints.only("sm"));
-
+  // a component to return multiple elements.
+  let history = useHistory();
   return (
-    // a component to return multiple elements.
-    <div className={classes.root}>
-      <React.Fragment>
-        <CssBaseline />
-        <Navbar />
-        <div className={classes.cardFeed}>
-          {/*     <img
+    <Router>
+      <Switch>
+        <Route exact path="/test" component={SingleBlog} />
+        <div className={classes.root}>
+          <React.Fragment>
+            <CssBaseline />
+            <Navbar />
+            <div className={classes.cardFeed}>
+              {/*     <img
             src={js}
             className={matches_ipad ? classes.banner_ipad : classes.banner}
           /> */}
-          <Slider />
-          <Grid
-            container
-            alignItems="center"
-            justify="center"
-            style={{
-              marginLeft: matches_sm ? "4%" : "13%",
-              marginRight: matches_sm ? "none" : "10",
-              paddingLeft: matches_sm ? "none" : "0,45em",
-            }}
-          >
-            <Grid item xs={12} sm={6}>
-              <Cardblog
-                date="14 May 20221"
-                // If the texts are long, it will enter the new line and break the layout
-                topic="Chontong the cat"
-                tags={["camera", "life style"]}
-                image={cat}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Cardblog
-                date="3 May 20221"
-                topic="Chontong the cat"
-                tags={["home", "cat"]}
-                image={cat}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Cardblog
-                date="14 May 20221"
-                topic="Chontong the cat"
-                tags={["camera", "life style"]}
-                image={daydream}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Cardblog
-                date="3 May 20221"
-                topic="Chontong the cat"
-                tags={["home", "cat"]}
-                image={cat}
-              />
-            </Grid>
-          </Grid>
-          <h4 style={{ fontWeight: 200 }}>© zuck_pa</h4>
+              <Slider />
+              <Grid
+                container
+                alignItems="center"
+                justify="center"
+                style={{
+                  marginLeft: matches_sm ? "4%" : "13%",
+                  marginRight: matches_sm ? "none" : "10",
+                  paddingLeft: matches_sm ? "none" : "0,45em",
+                }}
+              >
+                <Grid item xs={12} sm={6}>
+                  <Cardblog
+                    date="14 May 20221"
+                    // If the texts are long, it will enter the new line and break the layout
+                    topic="Chontong the cat"
+                    tags={["camera", "life style"]}
+                    image={cat}
+                  />
+                </Grid>
+                {/*      <SingleBlog /> */}
+
+                <Grid item xs={12} sm={6}>
+                  <Link to="/about">
+                    <Cardblog
+                      date="3 May 20221"
+                      topic="Chontong the cat"
+                      tags={["home", "cat"]}
+                      image={cat}
+                    />
+                  </Link>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Cardblog
+                    date="14 May 20221"
+                    topic="Chontong the cat"
+                    tags={["camera", "life style"]}
+                    image={daydream}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Cardblog
+                    date="3 May 20221"
+                    topic="Chontong the cat"
+                    tags={["home", "cat"]}
+                    image={cat}
+                  />
+                </Grid>
+              </Grid>
+              <h4 style={{ fontWeight: 200 }}>© zuck_pa</h4>
+            </div>
+          </React.Fragment>
         </div>
-      </React.Fragment>
-    </div>
+      </Switch>
+    </Router>
   );
 }
 

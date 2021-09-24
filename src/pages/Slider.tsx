@@ -20,7 +20,7 @@ export default function Slider() {
         <img alt="" src={js} />
       </div>
       <div>
-        <img alt="" src={daydream} />
+        <img alt="" src={js} />
       </div>
       <div>
         <img alt="" src={js} />

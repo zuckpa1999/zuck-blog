@@ -80,7 +80,7 @@ export default function Navbar() {
       </Toolbar>
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden mdUp={true} implementation="css">
+        <Hidden xlDown={true} implementation="css">
           <Drawer
             variant="temporary"
             anchor={theme.direction === "rtl" ? "right" : "left"}
@@ -96,7 +96,7 @@ export default function Navbar() {
             {drawer}
           </Drawer>
         </Hidden>
-        <Hidden mdUp={true} implementation="css">
+        <Hidden xlDown={true} implementation="css">
           <Drawer
             classes={{
               paper: classes.drawerPaper,

@@ -9,44 +9,56 @@ import Button from "@material-ui/core/Button";
 import { useLayoutEffect, useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useHistory } from "react-router-dom";
 export default function Cardblog({ date, topic, tags, image }) {
   const classes = useStyles();
   const theme = useTheme();
   const matches_sm = useMediaQuery(theme.breakpoints.down("sm"));
-
+  let history = useHistory();
   return (
-    <Card
-      className={matches_sm ? classes.rootCardMobile : classes.rootCardTablet}
+    <div
+      onClick={() => {
+        history.push("/test");
+      }}
     >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt={topic}
-          height="140"
-          image={image}
-          title={topic}
-        />
-        <CardContent>
-          <div className={classes.cardContentDetailFirstRow}>
-            <Typography className={classes.cardContentTopic}>
-              {topic}
-            </Typography>
-            <Typography className={classes.cardContentDate}>{date}</Typography>
-          </div>
-          <div className={classes.cardContentDetailSecondRow}>
-            {tags === undefined
-              ? null
-              : tags.map((tag) => (
-                  <Button variant="outlined" className={classes.cardContentTag}>
-                    <Typography className={classes.cardContentText}>
-                      {tag === undefined ? null : tag}
-                    </Typography>
-                  </Button>
-                ))}
-          </div>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+      <Card
+        className={matches_sm ? classes.rootCardMobile : classes.rootCardTablet}
+      >
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt={topic}
+            height="140"
+            image={image}
+            title={topic}
+          />
+          <CardContent>
+            <div className={classes.cardContentDetailFirstRow}>
+              <Typography className={classes.cardContentTopic}>
+                {topic}
+              </Typography>
+              <Typography className={classes.cardContentDate}>
+                {date}
+              </Typography>
+            </div>
+            <div className={classes.cardContentDetailSecondRow}>
+              {tags === undefined
+                ? null
+                : tags.map((tag) => (
+                    <Button
+                      variant="outlined"
+                      className={classes.cardContentTag}
+                    >
+                      <Typography className={classes.cardContentText}>
+                        {tag === undefined ? null : tag}
+                      </Typography>
+                    </Button>
+                  ))}
+            </div>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
   );
 }
 const useStyles = makeStyles((theme) => ({
