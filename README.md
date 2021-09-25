@@ -53,43 +53,48 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
 
-
-
- ## Personal Website
+## Personal Website
 
 ### Objective
- - have fun
- - pet's project
- - practice techs stack that I wanna learn
- - learn when to use grid vs flexbox vs position(CSS)
- - how to do media queries
-###  Stages
 
-1. UI 
- 1.1 mock design
- 1.2 draft 3 sizes on figma
+- have fun
+- pet's project
+- practice techs stack that I wanna learn
+- learn when to use grid vs flexbox vs position(CSS)
+- how to do media queries
+
+### Stages
+
+1. UI
+   1.1 mock design
+   1.2 draft 3 sizes on figma
 2. build MVP
 3. Deploy
 4. whatever lol
 
 ### Design
+
 ```shell
 https://www.figma.com/file/ARlYl0FgkjLlau33pFqW6A/zuck-blog?node-id=0%3A1
 ```
 
-### Functional  Requirements
-1. create / read/ update/ delete post -  admin
+### Functional Requirements
+
+1. create / read/ update/ delete post - admin
 2. read post - users
 3. Authentication & Authorization - oAuth2
 4. Post
+
 - tag
 - published date
 - Thumbnail
 - Paragraphs /Explanation
+- f
 
 ## Tech Stack ( MERN Stack)
 
 ### Front-end
+
 - React : Next.js vs Gatsby
 - CSS Framwork : Material-UI
 - CSS : Grid vs flexbox vs position
@@ -97,6 +102,7 @@ https://www.figma.com/file/ARlYl0FgkjLlau33pFqW6A/zuck-blog?node-id=0%3A1
 - Language : Type Script
 
 ### Back-end
+
 - Design pattern : MVC
 - Authen : oAuth2 vs JWT
 - API : GraphQL
@@ -107,13 +113,13 @@ https://www.figma.com/file/ARlYl0FgkjLlau33pFqW6A/zuck-blog?node-id=0%3A1
 - Caching? : Redis
 
 ### Design principle??
+
 - KISS
 - DRY
 - SOLID
 
-
 ### Domain
+
 - zuck.com
 - zuckpa.com
 - zuck_pa.com
-
