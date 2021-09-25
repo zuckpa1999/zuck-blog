@@ -89,7 +89,7 @@ https://www.figma.com/file/ARlYl0FgkjLlau33pFqW6A/zuck-blog?node-id=0%3A1
 - published date
 - Thumbnail
 - Paragraphs /Explanation
-- f
+- fcs
 
 ## Tech Stack ( MERN Stack)
 
