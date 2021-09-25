@@ -66,14 +66,12 @@ export default function Blog() {
                 {/*      <SingleBlog /> */}
 
                 <Grid item xs={12} sm={6}>
-                  <Link to="/about">
-                    <Cardblog
-                      date="3 May 20221"
-                      topic="Chontong the cat"
-                      tags={["home", "cat"]}
-                      image={cat}
-                    />
-                  </Link>
+                  <Cardblog
+                    date="3 May 20221"
+                    topic="Chontong the cat"
+                    tags={["home", "cat"]}
+                    image={cat}
+                  />
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <Cardblog
